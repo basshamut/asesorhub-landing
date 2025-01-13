@@ -1,0 +1,44 @@
+---
+const steps = [
+	{
+		title: "Regístrate",
+		description: "Crea tu cuenta como consultor o consultante en minutos."
+	},
+	{
+		title: "Completa tu Perfil",
+		description: "Añade tu información profesional o busca el consultor ideal."
+	},
+	{
+		title: "Agenda o Ofrece Consultorías",
+		description: "Utiliza nuestro sistema de reservas fácil y flexible."
+	},
+	{
+		title: "Realiza la Consultoría",
+		description: "Conéctate con tu consultor o consultante en la fecha acordada."
+	},
+	{
+		title: "Pago Seguro",
+		description: "Los pagos se procesan de forma segura a través de Stripe."
+	}
+];
+---
+
+<section id="how-it-works" class="py-20 bg-white">
+	<div class="container mx-auto px-6">
+		<h2 class="text-3xl font-bold text-center text-gray-800 mb-8">Cómo Funciona AsesorHub</h2>
+		<div class="flex flex-col items-center">
+			{steps.map((step, index) => (
+				<div class="flex items-center mb-8 w-full max-w-2xl">
+					<div class="flex-shrink-0 w-8 h-8 rounded-full bg-blue-600 text-white flex items-center justify-center font-bold text-lg">
+						{index + 1}
+					</div>
+					<div class="ml-4 flex-grow">
+						<h3 class="text-xl font-semibold mb-1">{step.title}</h3>
+						<p class="text-gray-600">{step.description}</p>
+					</div>
+				</div>
+			))}
+		</div>
+	</div>
+</section>
+

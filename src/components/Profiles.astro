@@ -1,0 +1,46 @@
+---
+const profiles = [
+	{
+		title: "Consultor",
+		features: [
+			"Crea tu perfil profesional detallado",
+			"Establece tu disponibilidad y tarifas",
+			"Gestiona tus consultorías fácilmente",
+			"Recibe pagos de forma segura",
+			"Construye tu reputación con calificaciones"
+		]
+	},
+	{
+		title: "Consultante",
+		features: [
+			"Explora perfiles de consultores expertos",
+			"Agenda consultorías según tu conveniencia",
+			"Paga de forma segura por los servicios",
+			"Recibe recordatorios automáticos",
+			"Califica y opina sobre tus experiencias"
+		]
+	}
+];
+---
+
+<section id="profiles" class="py-20 bg-gray-100">
+	<div class="container mx-auto px-6">
+		<h2 class="text-3xl font-bold text-center text-gray-800 mb-8">Perfiles en AsesorHub</h2>
+		<div class="grid md:grid-cols-2 gap-8">
+			{profiles.map(profile => (
+				<div class="bg-white rounded-lg shadow-md p-6">
+					<h3 class="text-2xl font-semibold mb-4 text-blue-600">{profile.title}</h3>
+					<ul class="space-y-2">
+						{profile.features.map(feature => (
+							<li class="flex items-center">
+								<svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+								{feature}
+							</li>
+						))}
+					</ul>
+				</div>
+			))}
+		</div>
+	</div>
+</section>
+
